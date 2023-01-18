@@ -1,0 +1,29 @@
+Experimental Settings: 
+ 
+target_name = chembl_factor_xa
+n_molecules = 3605
+n_mmps = 16599
+method_name = gin_knn
+ 
+k_splits = 2
+m_reps = 3
+random_state_cv = 42
+ 
+optuna_options = {'h_iters': 20, 'frac_train': 0.8, 'data_splitting_seed': 42, 'performance_metric': <function mean_absolute_error at 0x7f3c15f494d0>, 'direction': 'minimize', 'sampler': <optuna.samplers._tpe.sampler.TPESampler object at 0x7f3b11be28d0>, 'pruner': <optuna.pruners._nop.NopPruner object at 0x7f3b11be2a10>}
+ 
+mlp_hyperparameter_grid = {'architecture': [(None, 1)], 'hidden_activation': [ReLU()], 'output_activation': [Identity()], 'use_bias': [True], 'hidden_dropout_rate': [0], 'hidden_batchnorm': [True]}
+ 
+gin_hyperparameter_grid = {'n_conv_layers': [1, 2, 3], 'input_dim': [79], 'hidden_dim': [64, 128, 256], 'mlp_n_hidden_layers': [2], 'mlp_hidden_activation': [ReLU()], 'mlp_output_activation': [Identity()], 'mlp_use_bias': [True], 'mlp_hidden_dropout_rate': [0, 0.25], 'mlp_hidden_batchnorm': [True], 'eps': [0], 'train_eps': [False], 'pooling_operation': [<function global_max_pool at 0x7f3b3000b320>]}
+ 
+train_hyperparameter_grid = {'batch_size': [32, 64, 128], 'dataloader_shuffle': [True], 'dataloader_drop_last': [True], 'learning_rate': [0.01, 0.001], 'lr_lambda': [<function <lambda> at 0x7f3b11a3af80>, <function <lambda> at 0x7f3b11a3a3b0>], 'weight_decay': [0.1, 0.01], 'num_epochs': [500], 'loss_function': [MSELoss()], 'optimiser': [<class 'torch.optim.adamw.AdamW'>], 'performance_metrics': ['regression'], 'print_results_per_epochs': [None]}
+ 
+j_splits = 5
+h_iters = 10
+random_search_scoring = neg_mean_absolute_error
+random_search_verbose = 1
+random_search_random_state = 42
+random_search_n_jobs = -1
+hyperparameter_grid = {'n_neighbors': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100], 'weights': ['uniform', 'distance'], 'p': [1, 2, 3]}
+ 
+runtime = 04:27:56
+ 

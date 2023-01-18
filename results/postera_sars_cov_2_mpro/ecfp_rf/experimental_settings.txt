@@ -1,0 +1,26 @@
+Experimental Settings: 
+ 
+target_name = postera_sars_cov_2_mpro
+n_molecules = 1924
+n_mmps = 10832
+method_name = ecfp_rf
+ 
+k_splits = 2
+m_reps = 3
+random_state_cv = 42
+ 
+radius = 2
+bitstring_length = 2048
+use_features = False
+use_chirality = True
+ 
+j_splits = 5
+h_iters = 10
+random_search_scoring = neg_mean_absolute_error
+random_search_verbose = 1
+random_search_random_state = 42
+random_search_n_jobs = -1
+hyperparameter_grid = {'n_estimators': [500], 'max_depth': [30, 40, 50, 60, 70, 80, 90, 100, 110, 120, None], 'min_samples_split': [2, 4, 6, 8, 10, 12], 'min_samples_leaf': [1, 2, 3, 4, 5, 6], 'max_features': ['auto', 'sqrt', 'log2'], 'bootstrap': [True, False], 'random_state': [42]}
+ 
+runtime = 00:17:28
+ 

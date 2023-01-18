@@ -1,0 +1,29 @@
+Experimental Settings: 
+ 
+target_name = chembl_factor_xa
+n_molecules = 3605
+n_mmps = 16599
+method_name = gin_rf
+ 
+k_splits = 2
+m_reps = 3
+random_state_cv = 42
+ 
+optuna_options = {'h_iters': 20, 'frac_train': 0.8, 'data_splitting_seed': 42, 'performance_metric': <function mean_absolute_error at 0x7f3c15f494d0>, 'direction': 'minimize', 'sampler': <optuna.samplers._tpe.sampler.TPESampler object at 0x7f3ce9210210>, 'pruner': <optuna.pruners._nop.NopPruner object at 0x7f3ce95edf90>}
+ 
+mlp_hyperparameter_grid = {'architecture': [(None, 1)], 'hidden_activation': [ReLU()], 'output_activation': [Identity()], 'use_bias': [True], 'hidden_dropout_rate': [0], 'hidden_batchnorm': [True]}
+ 
+gin_hyperparameter_grid = {'n_conv_layers': [1, 2, 3], 'input_dim': [79], 'hidden_dim': [64, 128, 256], 'mlp_n_hidden_layers': [2], 'mlp_hidden_activation': [ReLU()], 'mlp_output_activation': [Identity()], 'mlp_use_bias': [True], 'mlp_hidden_dropout_rate': [0, 0.25], 'mlp_hidden_batchnorm': [True], 'eps': [0], 'train_eps': [False], 'pooling_operation': [<function global_max_pool at 0x7f3b3000b320>]}
+ 
+train_hyperparameter_grid = {'batch_size': [32, 64, 128], 'dataloader_shuffle': [True], 'dataloader_drop_last': [True], 'learning_rate': [0.01, 0.001], 'lr_lambda': [<function <lambda> at 0x7f3ce9541f80>, <function <lambda> at 0x7f3b11a3a5f0>], 'weight_decay': [0.1, 0.01], 'num_epochs': [500], 'loss_function': [MSELoss()], 'optimiser': [<class 'torch.optim.adamw.AdamW'>], 'performance_metrics': ['regression'], 'print_results_per_epochs': [None]}
+ 
+j_splits = 5
+h_iters = 10
+random_search_scoring = neg_mean_absolute_error
+random_search_verbose = 1
+random_search_random_state = 42
+random_search_n_jobs = -1
+hyperparameter_grid = {'n_estimators': [500], 'max_depth': [30, 40, 50, 60, 70, 80, 90, 100, 110, 120, None], 'min_samples_split': [2, 4, 6, 8, 10, 12], 'min_samples_leaf': [1, 2, 3, 4, 5, 6], 'max_features': ['auto', 'sqrt', 'log2'], 'bootstrap': [True, False], 'random_state': [42]}
+ 
+runtime = 04:45:40
+ 

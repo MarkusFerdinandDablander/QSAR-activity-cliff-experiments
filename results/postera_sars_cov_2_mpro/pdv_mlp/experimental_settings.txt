@@ -1,0 +1,21 @@
+Experimental Settings: 
+ 
+target_name = postera_sars_cov_2_mpro
+n_molecules = 1924
+n_mmps = 10832
+method_name = pdv_mlp
+ 
+k_splits = 2
+m_reps = 3
+random_state_cv = 42
+ 
+descriptor_list = None
+ 
+optuna_options = {'h_iters': 20, 'frac_train': 0.8, 'data_splitting_seed': 42, 'performance_metric': <function mean_absolute_error at 0x7fe13016a4d0>, 'direction': 'minimize', 'sampler': <optuna.samplers._tpe.sampler.TPESampler object at 0x7fe040155f10>, 'pruner': <optuna.pruners._nop.NopPruner object at 0x7fe040155450>}
+ 
+mlp_hyperparameter_grid = {'architecture': [(200, 64, 1), (200, 64, 64, 64, 64, 64, 1), (200, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 1), (200, 128, 1), (200, 128, 128, 128, 128, 128, 1), (200, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1), (200, 256, 1), (200, 256, 256, 256, 256, 256, 1), (200, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 1), (200, 512, 1), (200, 512, 512, 512, 512, 512, 1), (200, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 1)], 'hidden_activation': [ReLU()], 'output_activation': [Identity()], 'use_bias': [True], 'hidden_dropout_rate': [0, 0.25], 'hidden_batchnorm': [True]}
+ 
+train_hyperparameter_grid = {'batch_size': [32, 64, 128], 'dataloader_shuffle': [True], 'dataloader_drop_last': [True], 'learning_rate': [0.01, 0.001], 'lr_lambda': [<function <lambda> at 0x7fe1f4b20d40>, <function <lambda> at 0x7fe1f4b20f80>], 'weight_decay': [0.1, 0.01], 'num_epochs': [500], 'loss_function': [MSELoss()], 'optimiser': [<class 'torch.optim.adamw.AdamW'>], 'performance_metrics': ['regression'], 'print_results_per_epochs': [None]}
+ 
+runtime = 01:21:13
+ 
