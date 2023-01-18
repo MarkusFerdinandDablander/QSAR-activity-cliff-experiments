@@ -2,4 +2,4 @@
 
 
 
-![Graphical abstract](/figures/graphical_abstract.pdf)
+![Graphical abstract](/figures/graphical_abstract.png)
