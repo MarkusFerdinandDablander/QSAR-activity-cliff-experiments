@@ -20,6 +20,8 @@ def visualise_results(target,
                       plot_y_label = True,
                       plot_x_ticks = True,
                       plot_y_ticks = True,
+                      x_axis_units = "",
+                      y_axis_units = "",
                       plot_error_bars = True,
                       x_tick_stepsize = "auto",
                       y_tick_stepsize = "auto",
@@ -34,10 +36,11 @@ def visualise_results(target,
     Example inputs (plot AC-classification MCC against QSAR-prediction MAE in ChEMBL dopamine D2 data set): 
     
     target = "chembl_dopamine_d2"
-    task_x = "ac_test",
-    metric_x = "MCC",
-    task_y = "qsar_test",
-    metric_y = "MAE",
+    task_x = "ac_test"
+    metric_x = "MCC"
+    task_y = "qsar_test"
+    metric_y = "MAE"
+    y_axis_units = " (pK$_{\mathrm{i}}$ units)"
     """
     
     # create lists and dictionaries with experimental keys
@@ -171,7 +174,7 @@ def visualise_results(target,
     
     if plot_x_label == True:
     
-        plt.xlabel(metric_x + ": " + task_name_dict[task_x], 
+        plt.xlabel(metric_x + x_axis_units + ": " + task_name_dict[task_x], 
                    labelpad = size, 
                    fontsize = 1.1*size)
     else:
@@ -179,7 +182,7 @@ def visualise_results(target,
         
     if plot_y_label == True:
     
-        plt.ylabel(metric_y + ": " + task_name_dict[task_y], 
+        plt.ylabel(metric_y + y_axis_units + ": " + task_name_dict[task_y], 
                    labelpad = size, 
                    fontsize = 1.1*size)
     else:
