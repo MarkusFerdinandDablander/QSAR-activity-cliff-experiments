@@ -1,4 +1,4 @@
-# Systematically Exploring QSAR Models for Activity-Cliff Prediction
+# Exploring QSAR Models for Activity-Cliff Prediction
 
 Code to reproduce the experiments from the paper Systematically Exploring QSAR Models for Activity-Cliff Prediction. This repository also contains clean molecule- and MMP data for all three analysed data sets (dopamine receptor D2, factor Xa, SARS-CoV-2 main protease) as well as the original numerical results from the experiments conducted in the paper.
 
